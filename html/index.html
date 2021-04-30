@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Jeremias - Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/grid-style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body class="site">
+    <nav class="topnav">
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger"/>
+        <ul>
+          <li class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Portfolio
+                </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="index.html">Websites</a>
+                <a href="wordpress.html">WordPress</a>
+              </div>
+          </li>
+
+          <li><a href="background.html">About Me</a></li>
+
+          <li><a href="awards.html">Awards/Certificates</a></li>
+
+          <li><a href="contact.php">Contact Me</a></li>
+        </ul>
+    </nav>
+    <header>
+          <h1>Crystal Jeremias'</h1>
+          <h1>Crystal Clear Design</h1>
+          <h2>Full Stack Web Developer</h2>
+    </header>
+    <nav class="topnav2">
+      <ul>
+        <li id="resume"><a href="CrystalResume.pdf" target="_blank">Resume</a></li>
+        <li id="blog"><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
+
+    <section id="websites">
+        <h2>Featured Websites</h2>
+        <!-- <p id="wp2">(WEBSITES I'VE DONE)</p> -->
+        <p id="websiteDetails">My projects vary from whole sites to mobile apps.  All my projects are responsive with a primary focus on mobile.</p>
+        <div class="view" id="website1">
+          <img id="vcOver" src="../images/crackVC.png" alt="Website with blue background and Harley Davidson Emblem" />
+          <div class="mask">
+            <a target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB140/Project/viciousCycles/template/home.html"><h2>Vicious Cycles</h2>
+          <p>This is a website I built in my first semester.  While simple and using only HTML and CSS, I feel like it is a good beginner site.  It is responsive with mobile first design.  There are two forms and a link to an outside article.  </p></a>
+          <!-- <a id="website1" target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB140/Project/viciousCycles/template/home.html"></a> -->
+          </div>
+        </div>
+
+
+        <!-- <a id="website1" target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB140/Project/viciousCycles/template/home.html">
+          <img id="vcOver" src="../images/crackVC.png" alt="Website with blue background and Harley Davidson Emblem"><p>Vicious Cycles: Fictitious company website (Class Project)</p></a> -->
+          <!-- <p>This is a website I built in my first semester.  While simple and using only HTML and CSS, I feel like it is a good beginner site.  It is responsive with mobile first design.  There are two forms and a link to an outside article.  </p> -->
+
+        <!-- <a id="project3" target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB125/Lesson08/index.html">
+        <img id="topsailOver" src="../images/crackTopsail.png" alt="screenshot of website with 2 columns"><p>Topsail Beach: New home page for Topsail Beach website (Class Project)</p></a> -->
+          <div class="view" id="website2">
+            <img id="biltmoreOver" src="../images/crackBiltmore.png" alt="Biltmore mansion at top, three columns showcasing things to do at Biltmore" />
+            <div class="mask">
+              <a target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB125/Lesson12/index.html"><h2>More at Biltmore: Mobile Companion Site</h2>
+            <p>This is a mobile companion for the Biltmore site.  I utilized PhoneGap for this assignment and created an App Icon to go along with it.  </p></a>
+          </div>
+          </div>
+        <!-- <a id="website2" target="_blank" href="http://wcet3.waketech.edu/chjeremias/WEB125/Lesson12/index.html"> -->
+        <!-- <img id="biltmoreOver" src="../images/crackBiltmore.png" alt="Biltmore mansion at top, three columns showcasing things to do at Biltmore"><p>More at Biltmore: Mobile Companion Site</p></a> -->
+        <!-- <p>This is a mobile companion for the Biltmore site.  I utilized PhoneGap for this assignment and created an App Icon to go along with it.  </p> -->
+        <!-- <p id="websiteDetails">My projects vary from whole sites to mobile apps.  All my projects are responsive with a primary focus on mobile.</p> -->
+  </section>
+  <script>
+    /*When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    //Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i=0; i<dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown/classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+<footer id="contact">
+  <h2>Contact Information</h2>
+  <ul class="contact-list">
+    <li><a href="tel:+13362250409">(336) 225-0409</a></li>
+    <li><a href="mailto:crystal.jeremias@gmail.com">crystal.jeremias@gmail.com</a></li>
+    <li><a href="https://chjeremias.wordpress.com/" target="_blank">My WordPress</a></li>
+    <li><a href="https://www.linkedin.com/in/crystal-jeremias/" class="fa fa-linkedin" target="_blank"></a></li>
+    <li><a href="https://www.facebook.com/crystal.jeremias" class="fa fa-facebook" target="_blank"></a></li>
+  </ul>
+</footer>
+</html>

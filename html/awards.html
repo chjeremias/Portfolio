@@ -7,47 +7,44 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/grid-style.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body class="site">
     <nav class="topnav">
       <label for="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger"/>
-        <ul>
-          <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
-              <div class="dropdown-content">
-                <a href="websites.html">Websites</a>
-                <a href="wordpress.html">WordPress</a>
-                </div>
-            </li>
-          <li><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">About Me</a>
-            <div class="dropdown-content">
-                <a href="CrystalResume.pdf" target="_blank">Resume</a>
-                <a href="background.html">Background</a>
-              <a href="knowledge.html">Knowledge</a>
-              <a href="awards.html">Awards/Certificates</a>
-              </div>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Contact Me</a>
-            <div class="dropdown-content">
-                <a href="contact.html">Contact Information</a>
-                <a href="form.html">Contact Form</a>
-              </div>
-          </li>
-        </ul>
+      <ul>
+        <li class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Portfolio
+              </button>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="index.html">Websites</a>
+              <a href="wordpress.html">WordPress</a>
+            </div>
+        </li>
+
+        <li><a href="background.html">About Me</a></li>
+
+        <li><a href="awards.html">Awards/Certificates</a></li>
+
+        <li><a href="contact.php">Contact Me</a></li>
+      </ul>
     </nav>
     <header>
       <h1>Crystal Jeremias'</h1>
           <h1>Crystal Clear Design</h1>
           <h2>Full Stack Web Developer</h2>
     </header>
+    <nav class="topnav2">
+      <ul>
+        <li id="resume"><a href="CrystalResume.pdf" target="_blank">Resume</a></li>
+        <li id="blog"><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
 
     <section id="projects">
-        <h2>Featured Websites</h2>
+        <h2>Awards</h2>
         <a id="project1">
         <img src="../images/backlink.png" alt="Certificate for Backlink Management"></a>
 
@@ -72,16 +69,37 @@
         <a id="project8">
         <img src="../images/inboundcert.png" alt="Certificate for Inbound"></a>
   </section>
+  <script>
+    /*When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    //Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i=0; i<dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown/classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 
 <footer id="contact">
-  <h2>Let's Keep In Touch</h2>
+  <h2>Contact Information</h2>
   <ul class="contact-list">
-    <li>Phone:<a href="tel:+13362250409">(336) 225-0409</a></li>
+    <li><a href="tel:+13362250409">(336) 225-0409</a></li>
     <li><a href="mailto:crystal.jeremias@gmail.com">crystal.jeremias@gmail.com</a></li>
     <li><a href="https://chjeremias.wordpress.com/" target="_blank">My WordPress</a></li>
-    <li><a href="https://www.linkedin.com/in/crystal-jeremias/" target="_blank">LinkedIn</a></li>
-    <li><a href="https://www.facebook.com/crystal.jeremias" target="_blank">Facebook</a></li>
+    <li><a href="https://www.linkedin.com/in/crystal-jeremias/" class="fa fa-linkedin" target="_blank"></a></li>
+    <li><a href="https://www.facebook.com/crystal.jeremias" class="fa fa-facebook" target="_blank"></a></li>
+    <!-- <li><a href="CrystalResume.pdf" target="_blank">Resume</a></li>
+    <li><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li> -->
   </ul>
 </footer>
 </html>

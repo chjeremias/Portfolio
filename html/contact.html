@@ -1,3 +1,20 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+if ($_POST["submit"]) {
+  $recipient="crystal.jeremias@gmail.com";
+  $subject="Form to email meesage";
+  $sender=$_POST["sender"];
+  $senderEmail=$_POST["senderEmail"];
+  $message=$_POST["message"];
+
+  $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+  mail($recipient, $subject, mailBody, "From: $sender <$senderEmail>");
+
+  $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,58 +24,133 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/grid-style.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.emailmeform.com/builder/forms/jsform/k0V73d4mU8J0d7xvz8b" type="text/javascript"></script>
+<div style="margin-top:18px;text-align:center">
+    <div id='emf_advertisement'>
+        <font face="Verdana" size="2" color="#000000">Powered by</font>
+        <span style="position: relative; padding-left: 3px; bottom: -5px;">
+            <img src="//assets.emailmeform.com/images/footer-logo.png?bWFzdGVy" />
+            </span>
+            <font face="Verdana" size="2" color="#000000">EMF </font>
+            <a style="text-decoration:none;" href="https://www.emailmeform.com/" target="_blank">
+                <font face="Verdana" size="2" color="#000000">Form Builder</font></a>
+                </div>
+                </div>
   </head>
 
   <body class="site">
     <nav class="topnav">
       <label for="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger"/>
-        <ul>
-          <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
-              <div class="dropdown-content">
-                <a href="websites.html">Websites</a>
-                <a href="wordpress.html">WordPress</a>
-                </div>
-            </li>
-          <li><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">About Me</a>
-            <div class="dropdown-content">
-                <a href="CrystalResume.pdf" target="_blank">Resume</a>
-                <a href="background.html">Background</a>
-              <a href="knowledge.html">Knowledge</a>
-              <a href="awards.html">Awards/Certificates</a>
-              </div>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Contact Me</a>
-            <div class="dropdown-content">
-                <a href="contact.html">Contact Information</a>
-                <a href="form.html">Contact Form</a>
-              </div>
-          </li>
-        </ul>
+      <ul>
+        <li class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Portfolio
+              </button>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="index.html">Websites</a>
+              <a href="wordpress.html">WordPress</a>
+            </div>
+        </li>
+
+        <li><a href="background.html">About Me</a></li>
+
+        <li><a href="awards.html">Awards/Certificates</a></li>
+
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
     </nav>
     <header>
       <h1>Crystal Jeremias'</h1>
           <h1>Crystal Clear Design</h1>
           <h2>Full Stack Web Developer</h2>
     </header>
+    <nav class="topnav2">
+      <ul>
+        <li id="resume"><a href="CrystalResume.pdf" target="_blank">Resume</a></li>
+        <li id="blog"><a href="https://jeremiasportfolio.wordpress.com/" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
 
-    <section id="home">
-    <h2>Thank you for taking the time to look at my Portfolio.  I look forward to hearing from you.  <br>At the bottom of each page is my contact information. <br> If you have any questions about any of my work please feel free to send me a message.  </h2>
-    </section>
+    <!-- <section id="home">
+    <h2>Thank you for taking the time to look at my Portfolio.  I look forward to hearing from you.  <br> If you have any questions about any of my work please feel free to send me a message.</h2>
+
+    <h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Contact me.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+    </section> -->
+
+    <main id="content" class="main-area container">
+
+    <?=$thankYou ?>
+		
+      <form method="post" action="contact.php">
+  
+        <label for="sender">Name</label>
+        <input type="text" id="sender" name="sender" placeholder="Your name">
+  
+        <label for="senderEmail">Email</label>
+        <input type="text" id="senderEmail" name="senderEmail" placeholder="Your email">
+  
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Your phone number">
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Leave me a message" style="height:150px"></textarea>
+  
+        <input type="submit" value="Submit" />
+  
+      </form>
+      
+      <br><br>
+          
+      
+      
+      </main>
+
+    <script>
+      /*When the user clicks on the button, toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      //Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i=0; i<dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown/classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
 </body>
 
     <footer id="contact">
-        <h2>Let's Keep In Touch</h2>
-        <ul class="contact-list">
-          <li>Phone:<a href="tel:+13362250409">(336) 225-0409</a></li>
-          <li><a href="mailto:crystal.jeremias@gmail.com">crystal.jeremias@gmail.com</a></li>
-          <li><a href="https://chjeremias.wordpress.com/" target="_blank">My WordPress</a></li>
-          <li><a href="https://www.linkedin.com/in/crystal-jeremias/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.facebook.com/crystal.jeremias" target="_blank">Facebook</a></li>
-        </ul>
-      </footer>
+  <h2>Contact Information</h2>
+  <ul class="contact-list">
+    <li><a href="tel:+13362250409">(336) 225-0409</a></li>
+    <li><a href="mailto:crystal.jeremias@gmail.com">crystal.jeremias@gmail.com</a></li>
+    <li><a href="https://chjeremias.wordpress.com/" target="_blank">My WordPress</a></li>
+    <li><a href="https://www.linkedin.com/in/crystal-jeremias/" class="fa fa-linkedin" target="_blank"></a></li>
+    <li><a href="https://www.facebook.com/crystal.jeremias" class="fa fa-facebook" target="_blank"></a></li>
+  </ul>
+</footer>
       </html>

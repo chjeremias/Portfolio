@@ -3,19 +3,42 @@
 .topnav {
   background: #E63946;
   margin: 0;
-  display:inline-block;
+  /* display:inline-block; */
   text-align:center;
 }
+.topnav2 {
+  background: #E63946;
+  margin: 0;
+  /* display:inline-block; */
+  text-align:center;
+}
+/* button {
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+} */
 .dropbtn {
-  background-color: #E63946;
-  color: #343434;
+  background-color: transparent;
+  color: #fff;
+  font-size: 17px;
   padding-top: 20px;
   padding-bottom: 20px;
   border: none;
+  width: 100%;
+  cursor: pointer;
 }
-.dropdown {
+.dropbtn:hover {
+  color: #343434;
+}
+/* .dropdown {
   position: relative;
   display: inline-block;
+} */
+.dropdown:hover {
+  color: #343434;
+  background:#EC9A9A;
+  display:block;
 }
 .dropdown-content {
   display: none;
@@ -26,25 +49,19 @@
   z-index: 1;
 }
 .dropdown-content a {
-  color: #343434;
+  color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
   text-decoration: none;
   display: block;
 }
-/* .dropdown-content a:hover {
-  background-color: #0bc9cd
-} */
-.dropdown:hover .dropdown-content {
+.show {
   display: block;
-}
-.dropdown:hover .dropbtn {
-  background-color: #EC9A9A
 }
 .topnav a {
   display:block;
   text-decoration:none;
-  color: #343434;
+  color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -57,10 +74,8 @@
   text-align: center;
 } 
 .topnav ul li {
-  float: left;
   text-decoration: none;
   font-size: 17px;
-  width: 25%; 
   text-align: center;
   background:#E63946;
 }
@@ -71,10 +86,12 @@
 .topnav ul li:hover ul li {
   display:block;
 }
-.topnav ul ul ul {
+/* .topnav ul ul ul {
   display:none;
-}
+} */
 .topnav ul ul li:hover ul {
+  color: #343434;
+  background:#EC9A9A;
   display:block;
   position:absolute;
   width:150px;
@@ -82,8 +99,61 @@
   left:150px;
   top:0;
  }
- .topnav label, #hamburger {
+ /* .topnav label, #hamburger {
   display: none;
+} */
+
+.topnav2 a {
+  display:block;
+  text-decoration:none;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.topnav2 a:hover {
+  color: #343434;
+  background:#EC9A9A;
+}
+.topnav2 ul {
+  list-style-type:none;
+  text-align: center;
+} 
+.topnav2 ul li {
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  background:#E63946;
+}
+.topnav2 ul ul li {
+  position:relative;
+  display:none;
+}
+.topnav2 ul li:hover ul li {
+  display:block;
+}
+/* .topnav ul ul ul {
+  display:none;
+} */
+.topnav2 ul ul li:hover ul {
+  color: #343434;
+  background:#EC9A9A;
+  display:block;
+  position:absolute;
+  width:150px;
+  height:50px;
+  left:150px;
+  top:0;
+ }
+header {
+  background: #1B065E;
+  border: solid #A8DADC;
+  color: #F1FAEE;
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 body {
 color: #343434;
@@ -99,16 +169,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-h1 {
-  font-size: 100px;
-  line-height: 1;
-  text-shadow: 2px 2px 5px black;
-  text-align: center;
-}
-h2 {
-  font-size: 50px;
-  text-align: center;
-}
 h1, h2 {
   font-family: 'Caveat', cursive;
   font-weight: 400;
@@ -117,226 +177,489 @@ h1, h2 {
 p {
   text-align: center;
   align-self: center;
+  margin-right: 15px;
+  margin-left: 15px;
 }
-
-/* Profile
--------------------------------*/
-header {
-  background: #1B065E;
-  border: solid #A8DADC;
-  color: #F1FAEE;
-  text-align: center;
+#websites {
+  background: #A8DADC;
+  border: solid #1B065E;
 }
 #profile {
   background: #A8DADC;
   border: solid #1B065E;
 }
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#left {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#right {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#aboutLeft {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#aboutMLeft {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#aboutMRight {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#aboutRight {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#index1 {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#index2 {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#index3 {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-#index4 {
-  background: #A8DADC;
-  border: solid #1B065E;
-}
-
-/* Projects
--------------------------------*/
 #projects {
   background: #A8DADC;
   border: solid #1B065E;
 }
-#vcOver:hover {
-  content: url(../images/VC-home300.png);
-  transition: 0.5s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#topsailOver:hover {
-  content: url(../images/topsail.png);
-  transition: 0.5s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#biltmoreOver:hover {
-  content: url(../images/biltmore.png);
-  transition: 0.5s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#gamingOver:hover {
-  content: url(../images/wp_gaming.png);
-  transition: 0.5s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#ashevilleOver:hover {
-  content: url(../images/wp_asheville.png);
-  transition: 0.5s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Education
--------------------------------*/
-#education {
-  
+#word {
   background: #A8DADC;
   border: solid #1B065E;
 }
-
-/* Contact Info
--------------------------------*/
 #contact {
   background: #E63946;
   border: solid #EC9A9A;
   color: #343434;
   text-align: center;
 }
-
-@media screen and (min-width: 600px) {
-  .topnav {
-    padding:10px 0;
-    display:block;
-    height:100px;
-  }
-  #vcOver:hover {
-    content: url(../images/VC-home300.png);
-    transition: 0.5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #topsailOver:hover {
-    content: url(../images/topsail.png);
-    transition: 0.5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #biltmoreOver:hover {
-    content: url(../images/biltmore.png);
-    transition: 0.5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #gamingOver:hover {
-    content: url(../images/wp_gaming.png);
-    transition: 0.5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #ashevilleOver:hover {
-    content: url(../images/wp_asheville.png);
-    transition: 0.5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.contact-list {
+  display: block;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-@media screen and (max-width: 599px) {
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .topnav {
-    background: #EC9A9A;
-    margin: 0 auto;
-    display:inline-block;
-    text-align:left;
-    width: 100%;
-    position: sticky;
-  }
-  .topnav ul {
+input[type=submit] {
+  background-color: #1B065E;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1B065E;
+}
+
+.container {
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  background-color: #A8DADC;
+  padding: 20px;
+}
+
+
+/* For mobile phones/tablets: */
+/* .topnav {
+  background: #EC9A9A;
+  margin: 0 auto;
+  display:inline-block;
+  text-align:left;
+  width: 100%;
+  position: sticky;
+} */
+.topnav #hamburger {
+  display: none;
+}
+.topnav #hamburger ul li {
+display: block;
+color: #1B065E;
+background: #E63946;
+font-style: normal;
+font-size: 1.2em;
+padding: 10px;
+}
+.topnav ul {
+list-style-type: none;
+margin: 0;
+padding: 0; 
+}
+.topnav ul li {
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%; 
+  text-align: center;
+  background:#E63946;
+}
+/* .topnav ul li {
+display: inline-block;
+padding: 10px;
+box-sizing: border-box;
+} */
+.topnav ul li a {
+color: #fff;
+text-decoration: none;
+}
+.topnav label {
+display: inline-block;
+color: #1B065E;
+background: #E63946;
+font-style: normal;
+font-size: 1.2em;
+padding: 10px;
+}
+.topnav ul li {
+  display: block;
+}
+/* .topnav ul li {
+  border-top: 1px solid #333;
+} */
+.topnav ul {
+  display: none;
+}
+.topnav input:checked ~ ul {
+  display: block;
+}
+
+.topnav2 li {
+  display: inline;
+}
+.topnav2 ul {
   list-style-type: none;
   margin: 0;
   padding: 0; 
-}
-.topnav ul li {
-  display: inline-block;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.topnav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-.topnav label {
-  display: inline-block;
-  color: #fff;
-  background: #E63946;
-  font-style: normal;
-  font-size: 1.2em;
-  padding: 10px;
-}
-  .topnav ul li {
-    display: block;
   }
-  .topnav ul li {
-    border-top: 1px solid #333;
+  .topnav2 ul li {
+    text-decoration: none;
+    font-size: 17px;
+    width: 50%; 
+    text-align: center;
+    background:#E63946;
   }
-  .topnav ul {
-    display: none;
-  }
-  .topnav input:checked ~ ul {
-    display: block;
-  }
+  .topnav2 ul li a {
+    color: #fff;
+    text-decoration: none;
+    }
+    .topnav2 label {
+    display: inline-block;
+    color: #1B065E;
+    background: #E63946;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    }
+    .topnav2 ul li {
+      display: block;
+    }
+    #resume {
+      float: left;
+    }
+    #blog {
+      float: right;
+    }
+h1 {
+  font-size: 50px;
+  line-height: 1;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
 }
-
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+footer ul {
+  display: block;
+}
+#vcOver {
+  content: url(../images/VC-home300.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#biltmoreOver {
+  content: url(../images/biltmore.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#gamingOver {
+  content: url(../images/wp_gaming.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ashevilleOver {
+  content: url(../images/wp_asheville.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .contact-list {
-  list-style-type: none !important;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+list-style-type: none !important;
+padding: 0;
+display: block;
+justify-content: space-evenly;
 }
 .contact-list a {
-  padding: 15px;
-  display: inline-block;
+padding: 15px;
+display: inline-block;
 }
 
+
+@media only screen and (min-width: 915px) {
+  /*for Desktops*/
+  .topnav {
+    /* padding:10px 0; */
+    display:block;
+    height:60px;
+  } 
+  .topnav ul {
+    list-style-type:none;
+    text-align: center;
+    display: block;
+  } 
+  .topnav ul li {
+    float: left;
+    text-decoration: none;
+    font-size: 17px;
+    width: 25%; 
+    text-align: center;
+    background:#E63946;
+  }
+  .topnav ul li {
+    display: inline-block;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    }
+  .topnav label, #hamburger {
+  display: none;
+  } 
+  .topnav ul ul li:hover ul {
+    color: #343434;
+    background:#EC9A9A;
+    display:block;
+    position:absolute;
+    width:150px;
+    height:50px;
+    left:150px;
+    top:0;
+   }
+  .topnav a {
+    display:block;
+    text-decoration:none;
+    color: #343434;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .topnav {
+    background: #E63946;
+    margin: 0;
+    display:inline-block;
+    text-align:center;
+  }
+  
+  .topnav2 {
+    /* padding:10px 0; */
+    display:block;
+    height:60px;
+  } 
+  .topnav2 ul {
+    list-style-type:none;
+    text-align: center;
+    display: block;
+  } 
+  .topnav2 ul li {
+    float: left;
+    text-decoration: none;
+    font-size: 17px;
+    width: 50%; 
+    text-align: center;
+    font-weight: bold;
+    background:#E63946;
+  }
+  .topnav2 ul li {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .topnav2 ul ul li:hover ul {
+    color: #343434;
+    background:#EC9A9A;
+    display:block;
+    position:absolute;
+    width:150px;
+    height:30px;
+    left:150px;
+    top:0;
+  }
+  .topnav2 a {
+    display:block;
+    text-decoration:none;
+    color: #343434;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .topnav2 {
+    background: #E63946;
+    margin: 0;
+    display:inline-block;
+    text-align:center;
+  }
+
+  .view {
+    width: 300px;
+    height: 225px;
+    margin: auto;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    
+}
+.view .mask, .view .content {
+    width: 300px;
+    height: 225px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view img { 
+	transition: all 0.4s ease-in-out 0.2s;
+    opacity: 1;
+}
+.view .mask { 
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	transform: scale(0) rotate(-180deg);
+	transition: all 0.4s ease-in;
+  border-radius: 0px;
+}
+.view h2{
+    opacity: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+	transition: all 0.5s ease-in-out;
+}
+.view p { 
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.view a.info { 
+    opacity: 0;
+	transition: all 0.5s ease-in-out;
+} 
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+.view:hover .mask { 
+	opacity: 1; 
+	transform: scale(1) rotate(0deg);
+	transition-delay: 0.2s;
+}								  
+.view:hover img 	  { 
+	transform: scale(0); 
+    opacity: 0;
+	transition-delay: 0s;
+}						
+.view:hover h2,
+.view:hover p,
+.view:hover a.info{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+  h1 {
+    font-size: 100px;
+    line-height: 1;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+  }
+  h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+  button {
+    outline: none;
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  #vcOver {
+    content: url(../images/VC-home300.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #biltmoreOver {
+    content: url(../images/biltmore.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #gamingOver {
+    content: url(../images/wp_gaming.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ashevilleOver {
+    content: url(../images/wp_asheville.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #A8DADC;
+    padding: 20px;
+    margin: 0.25% 25%;
+  }
+  /* .contact-list a {
+    padding: 50%;
+    } */
+    .contact-list {
+      list-style-type: none !important;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      }
+}
